@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Contactr</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="page-header">
+  <a href="/"><img src="img/logo.png" class="logo" alt="Contactr"></a>
+  <div class="text">Keep your contacts in one place, <span class="username">{{= username }}</span>!</div>
+  <div class="login-wrap">
+    Logged as <span class="username">{{= username }}</span>
+    &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+    <a href="/logout">Logout</a>
+  </div>
+</div>
+
+<div class="content">
+  <div class="contacts">
+    <form id="addContact" class="contact-form" action="#">
+      <div class="title">
+        Add new contact, <span class="username">{{= username }}</span>!
+      </div>
+      <div>
+        <label for="name">Name</label>
+        <input type="text" id="name">
+      </div>
+
+      <div>
+        <label for="tel">Tel</label>
+        <input type="text" id="tel">
+      </div>
+
+      <div>
+        <label for="email">Email</label>
+        <input type="text" id="email">
+      </div>
+
+      <div>
+        <label for="photo">Photo</label>
+        <div class="photo-drop">
+          <img src="#" alt="Contact photo">
+          <span>Drop photo here</span>
+        </div>
+      </div>
+      <button class="add">Add</button>
+    </form>
+    <div class="contact-list">
+      <div class="title">
+        Your contacts, <span class="username">{{= username }}</span>!
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="page-footer">
+  Demo app built with <a href="http://backbonejs.org/">Backbone.js</a>, <a href="http://nodejs.org/">Node.js</a> and <a href="http://www.mongodb.org/">MongoDB</a>.
+  The source code is available on <a href="#">GitHub</a>
+</div>
+
+<script id="contactTemplate" type="text/template">
+  <img src=<%= photo %> alt="photo" class="contact-photo">
+  <ul>
+    <li>Name: <%= name %></li>
+    <li>Tel: <%= tel %></li>
+    <li>Email: <%= email %></li>
+  </ul>
+  <button class="delete">Delete</button>
+</script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.5.2/underscore-min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.0.0/backbone-min.js"></script>
+<script src="js/models/contact.js"></script>
+<script src="js/collections/library.js"></script>
+<script src="js/views/contact.js"></script>
+<script src="js/views/library.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,282 @@
+@font-face {
+  font-family: 'Rambla';
+  src: url('fonts/Rambla-Regular.ttf') format('truetype');
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  font-family: 'Rambla', sans-serif;
+  font-size: 14px;
+  background: #fff;
+  margin: 0;
+  margin-bottom: 50px;
+  min-width: 720px;
+}
+
+input, textarea {
+  font-family: 'Rambla', sans-serif;
+  font-size: 14px;
+  padding: 0;
+  margin: 0;
+  border: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  border: none;
+}
+
+button {
+  font-family: 'Rambla', sans-serif;
+  border: none;
+  height: 25px;
+  line-height: 24px;
+  background: #a2c9d3;
+  padding: 0 22px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:active {
+  background: #83afba;
+}
+
+button.delete {
+  background: #f17467;
+}
+
+button.delete:active {
+  background: #d6584b;
+}
+
+button.edit {
+  background: #f2c078;
+}
+
+button.edit:active {
+  background: #dfad65;
+}
+
+.title {
+  font-size: 18px;
+  margin-bottom: 24px;
+}
+
+/* form start */
+form label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+form div {
+  margin-bottom: 18px;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  background: #dedede;
+  border-radius: 5px;
+  outline: none;
+  padding-left: 10px;
+  padding-right: 10px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+form input {
+  height: 25px;
+  line-height: 25px;
+}
+
+form .photo-drop {
+  height: 135px;
+  background: #dedede;
+  border-radius: 5px;
+  text-align: center;
+  width: 100%;
+  display: table;
+  position: relative;
+}
+
+form .photo-drop span {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+form .photo-drop img {
+  display: none;
+  position: absolute;
+  top: 20px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+/* form end */
+
+/* header start */
+.page-header {
+  background: #4d4757;
+  color: #fff;
+  position: relative;
+  padding: 20px 40px;
+}
+
+.page-header a {
+  color: #fff;
+}
+
+.page-header a:hover {
+  color: #ddd;
+}
+
+.page-header .logo {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.page-header .text {
+  font-size: 16px;
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+  top: 8px;
+  left: 26px;
+}
+
+.page-header .login-wrap {
+  position: absolute;
+  right: 40px;
+  top: 28px;
+}
+/* header end */
+
+/* content start */
+.content {
+  position: relative;
+}
+
+.contacts {
+  padding: 30px 40px;
+  background: #fff;
+  display: table;
+}
+
+.contacts .contact-form,
+.contacts .contact-list {
+  vertical-align: top;
+  display: table-cell;
+}
+
+.contacts .contact-form {
+  width: 190px;
+}
+
+.contacts .contact-list {
+  padding-left: 50px;
+}
+
+.contacts .contact-list .spinner {
+  width: 40px;
+  height: 40px;
+}
+
+.contacts .contact-item {
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 20px;
+  margin-bottom: 30px;
+}
+
+.contacts .contact-item img {
+  max-width: 50px;
+  max-height: 50px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.contacts .contact-item ul {
+  padding: 0;
+  list-style: none;
+  margin-top: 8px;
+}
+
+.contacts .contact-item button {
+  display: block;
+}
+/* content end */
+
+/* footer start */
+.page-footer {
+  background: #eee;
+  height: 50px;
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  min-width: 720px;
+  padding: 20px 40px;
+  min-height: 50px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+/* footer end */
+
+/* auth start */
+.auth {
+  padding: 30px 40px;
+  background: #fff;
+  text-align: center;
+}
+
+.form-wrap {
+  margin-top: 100px;
+}
+
+.signup-form,
+.login-form {
+  width: 190px;
+  display: inline-block;
+  vertical-align: top;
+  text-align: left;
+}
+
+.login-form {
+  margin-right: 100px;
+}
+/* auth end */
+
+/* info start */
+.msg-wrap {
+  text-align: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.msg.error {
+  background: #f2c078;
+  padding: 10px;
+  margin: 0;
+}
+
+.msg.success {
+  background: #a2c9d3;
+  padding: 10px;
+}
+/* info end */

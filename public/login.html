@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Contactr</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="page-header">
+  <a href="/"><img src="img/logo.png" class="logo" alt="Contactr"></a>
+  <div class="text">Keep your contacts in one place!</div>
+</div>
+
+<div class="content">
+  <div class="msg-wrap">{{- message }}</div>
+  <div class="auth">
+    <div class="form-wrap">
+      <form action="/login" method="POST" name="login" class="login-form">
+        <div class="title">
+          Log in!
+        </div>
+        <div class="login-demo">
+          Or <a href="#">try demo account</a>
+        </div>
+        <div>
+          <label for="username">Name</label>
+          <input type="text" id="username" name="username" autofocus>
+        </div>
+
+        <div>
+          <label for="password">Password</label>
+          <input type="text" id="password" name="password">
+        </div>
+
+        <button class="sign-in">Log in!</button>
+      </form>
+
+      <form action="/signup" method="POST" name="signup" class="signup-form">
+        <div class="title">
+          Sign up!
+        </div>
+        <div class="login-demo">
+          Or <a href="#">try demo account</a>
+        </div>
+        <div>
+          <label for="signup-username">Name</label>
+          <input type="text" id="signup-username" name="username">
+        </div>
+
+        <div>
+          <label for="signup-password">Password</label>
+          <input type="text" id="signup-password" name="password">
+        </div>
+
+        <button class="sign-up">Sign up!</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<div class="page-footer">
+  Demo app built with <a href="http://backbonejs.org/">Backbone.js</a>, <a href="http://nodejs.org/">Node.js</a> and <a href="http://www.mongodb.org/">MongoDB</a>.
+  The source code is available on <a href="#">GitHub</a>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.5.2/underscore-min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.0.0/backbone-min.js"></script>
+
+<script>
+  $('.login-demo a').on('click', function(e) {
+    e.preventDefault();
+    var form = $('.login-form');
+    form.find('input').val('Demo');
+    form.find('button').click();
+  });
+</script>
+
+</body>
+</html>
