@@ -11,7 +11,7 @@ Demo contact manager app built with Backbone.js, Node.js and MongoDB.
 - Slick ui!
 
 ## Online demo
-[http://ba-app02.eu01.aws.af.cm/](http://ba-app02.eu01.aws.af.cm/)
+[http://contactr-rdxi.rhcloud.com/](http://contactr-rdxi.rhcloud.com/)
 
 ## Quick start
 Install dependencies:
