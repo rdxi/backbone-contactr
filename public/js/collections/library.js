@@ -1,8 +1,17 @@
-console.log('collections/library.js start');
+define([
+  'jquery',
+  'underscore',
+  'backbone',
+  'models/contact'
+  ], function($, _, Backbone, ContactModel) {
 
-var app = app || {};
+  console.log('collections/library.js start');
 
-app.Library = Backbone.Collection.extend({
-  model: app.Contact,
-  url: '/api/contacts'
+  var Library = Backbone.Collection.extend({
+    model: ContactModel,
+    url: '/api/contacts'
+  });
+
+  return Library;
+
 });

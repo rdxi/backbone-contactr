@@ -107,9 +107,13 @@ form .photo-drop {
   position: relative;
 }
 
-form .photo-drop span {
+form .photo-drop label {
   display: table-cell;
   vertical-align: middle;
+}
+
+form .photo-input {
+  display: none;
 }
 
 form .photo-drop img {
@@ -213,8 +217,30 @@ form .photo-drop img {
   margin-top: 8px;
 }
 
+.contacts .contact-item li {
+  margin-top: 2px;
+  margin-bottom: 2px;
+}
+
 .contacts .contact-item button {
   display: block;
+}
+
+.contacts .contact-item input {
+  padding-left: 2px;
+  padding-right: 2px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.contacts .contact-item input:hover {
+  background: #eee;
+}
+
+.contacts .contact-item input:focus {
+  outline: none;
+  background: #dedede;
+  cursor: text;
 }
 /* content end */
 

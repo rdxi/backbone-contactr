@@ -49,7 +49,8 @@ app.engine('html', ejs.renderFile);
 api(app); // routes and api init
 
 // start server
-var port = 3000;
-app.listen( port, function() {
-  console.log( 'Express server listening on port %d in %s mode', port, app.settings.env );
+var ipaddress = process.env.OPENSHIFT_NODEJS_IP || "127.0.0.1";
+var port = process.env.OPENSHIFT_NODEJS_PORT || 3000;
+app.listen( port, ipaddress, function() {
+    console.log((new Date()) + ' Express server is listening on port 3000');
 });

@@ -41,8 +41,11 @@
         <label for="photo">Photo</label>
         <div class="photo-drop">
           <img src="#" alt="Contact photo">
-          <span>Drop photo here</span>
+          <label for="photo-input">
+            <span>Drop photo here</span>
+          </label>
         </div>
+        <input class="photo-input" id="photo-input" type="file">
       </div>
       <button class="add">Add</button>
     </form>
@@ -62,20 +65,14 @@
 <script id="contactTemplate" type="text/template">
   <img src=<%= photo %> alt="photo" class="contact-photo">
   <ul>
-    <li>Name: <%= name %></li>
-    <li>Tel: <%= tel %></li>
-    <li>Email: <%= email %></li>
+    <li class="name">Name: <input value="<%= name %>"> </li>
+    <li class="tel">Tel: <input value="<%= tel %>"> </li>
+    <li class="email">Email: <input value="<%= email %>"> </li>
   </ul>
   <button class="delete">Delete</button>
 </script>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.5.2/underscore-min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.0.0/backbone-min.js"></script>
-<script src="js/models/contact.js"></script>
-<script src="js/collections/library.js"></script>
-<script src="js/views/contact.js"></script>
-<script src="js/views/library.js"></script>
-<script src="js/app.js"></script>
+
+<script data-main="js/app" src="js/libs/require.js"></script>
 </body>
 </html>

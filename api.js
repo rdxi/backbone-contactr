@@ -34,7 +34,11 @@ module.exports = function(app) {
   // auth helpers end
 
   // connect to database
-  mongoose.connect( 'mongodb://localhost/contactr' );
+  if (process.env.OPENSHIFT_NODEJS_IP) {
+    mongoose.connect('mongodb://admin:X5gZ4YNW9N-R@127.4.117.2:27017/contactr');
+  } else {
+    mongoose.connect( 'mongodb://localhost/contactr' );
+  }
 
   // mongoose schemas
   var Contact = new mongoose.Schema({
