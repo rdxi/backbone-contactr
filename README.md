@@ -6,6 +6,7 @@ Demo contact manager app built with Backbone.js, Node.js and MongoDB.
 ## Featuring
 - Basic authorization and password encryption
 - REST api usage example with Node.js and Backbone.js
+- Asynchronous Module Definition with Require.js
 - Mongoose Schema usage example
 - Client-side image resizing and cropping
 - Slick ui!
