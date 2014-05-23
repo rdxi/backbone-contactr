@@ -44,6 +44,11 @@ button {
   cursor: pointer;
 }
 
+button::-moz-focus-inner { /*Remove button padding in FF*/
+  border: 0;
+  padding: 0;
+}
+
 button:active {
   background: #83afba;
 }
