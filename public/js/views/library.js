@@ -13,10 +13,12 @@ define([
       el: '.contacts',
 
       initialize: function(initialContacts) {
+        this.parentEl = $('.content');
+        this.parentEl.addClass('loading');
+
         this.collection = new LibraryCollection();
         this.collection.fetch({reset: true});
 
-        this.render();
         this.listenTo(this.collection, 'add', this.renderContact);
         this.listenTo(this.collection, 'reset', this.render);
       },
@@ -26,7 +28,7 @@ define([
         this.collection.each(function(item) {
           this.renderContact(item);
         }, this);
-        this.$el.removeClass('loading');
+        this.parentEl.removeClass('loading');
       },
 
       // render a contact by creating a contactView and appending the

@@ -311,3 +311,27 @@ form .photo-drop img {
   padding: 10px;
 }
 /* info end */
+
+/* preloader start */
+.loading::after {
+  content: 'Loading contacts...';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-radius: 50%;
+  -webkit-animation: preloader 0.8s infinite linear;
+  animation: preloader 0.8s infinite linear;
+}
+
+@-webkit-keyframes preloader {
+  0%   {opacity: 1;}
+  50%  {opacity: 0.3;}
+  100% {opacity: 1;}
+}
+
+@keyframes preloader {
+  0%   {opacity: 1;}
+  50%  {opacity: 0.3;}
+  100% {opacity: 1;}
+}
+/* preloader end */
