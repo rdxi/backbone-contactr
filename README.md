@@ -3,7 +3,7 @@ Backbone Contactr
 
 Contact manager app built with Backbone.js, Node.js and MongoDB.
 
-![Contactr screenshot](https://github.com/rdxi/backbone-contactr/raw/master/contactr.jpg)
+<img src="https://github.com/rdxi/backbone-contactr/raw/master/contactr.jpg" width="600">
 
 ## Featuring
 - Basic authorization and password encryption
